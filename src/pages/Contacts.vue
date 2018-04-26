@@ -1,8 +1,8 @@
 <template>
-  <div class='container'>
+  <div class='container mt-4'>
     <div class ='row'>
       <div class ='col'>
-        <ContactList />
+        <ContactList :contacts='contacts'/>
       </div>
       <div class = 'col'>
         <ContactDetails />
@@ -19,6 +19,15 @@ export default {
   components:{
     ContactList,
     ContactDetails
+  },
+  data(){
+    return {
+      contacts:[
+        {name: 'john doe'},
+        {name: 'jane doe'},
+        {name: 'marko popovic'}
+      ]
+    }
   }
 
 }
